@@ -4,10 +4,8 @@
 // 22/19/02
 
 #include <iostream>
-
 #include <stack>
 #include <vector>
-
 #include <random> // pour générer  un nombre aléatoire
 #include <chrono> // pour la seed du générateur de nombre aléatoire
 
@@ -16,20 +14,13 @@
 using std::cout, std::cin, std::vector, std::stack;
 
 
-
-//#include <sstream>
-//#include <iterator>
-//#include <algorithm>
-//#include <math.h>
-
-
-
 // Return the shadok of the number
 // param : number (0,1,2,3)
 // return : shadok of the nb
 string printshad(int nb)
 {
     string sha;
+    
     switch (nb)
     {
     case 0: sha = " GA";
@@ -139,7 +130,6 @@ void testsFunctions()
 
     for (int i=0; i <11; i++)
         dectoshad(distribNumberDec(gen));
-
 
 
     cout << '\n' << " ---- Shadok to decimal : " << '\n';
