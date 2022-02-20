@@ -13,29 +13,7 @@
 
 using std::cout, std::cin, std::vector, std::stack;
 
-
-// Return the shadok of the number
-// param : number (0,1,2,3)
-// return : shadok of the nb
-string printshad(int nb)
-{
-    string sha;
-    
-    switch (nb)
-    {
-    case 0: sha = " GA";
-        break;
-    case 1: sha = " BU";
-        break;
-    case 2: sha = " ZO";
-        break;
-    case 3: sha = " MEU";
-        break;
-    }
-
-    return sha;
-}
-
+vector <string> shadWords{" GA"," BU"," ZO"," MEU"};
 
 // Convert shadok to decimal
 // param : string of the number in shadok to convert in decimal
@@ -99,16 +77,15 @@ void dectoshad(int nb)
         }while(nb > 0);
 
 
-
         for(r.size();r.size() > 0;)
         {
-            cout << printshad(r.top());
+            cout << shadWords[r.top()];
             r.pop();
         }
         cout << "\n\n";
     }
     else if (nb == 0)
-        cout << printshad(nb) << '\n';
+        cout << shadWords[nb] << '\n';
     else
         cout << "Conversion impossible de : " << nb << '\n';
 }
@@ -140,7 +117,7 @@ void testsFunctions()
     for (int i=0; i <11; i++)
     {
         for (int i=0; i < (distribNumberSha(gen)+2)*4 ; i++)
-            shaSentence+=printshad(distribNumberSha(gen));
+            shaSentence+=shadWords[distribNumberSha(gen)];
         shadtodec(shaSentence);
         shaSentence = "";
     }

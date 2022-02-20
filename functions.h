@@ -11,11 +11,6 @@ using std::string;
 #define FUNCTIONS_H
 
 
-// Return the shadok of the number
-// param : number (0,1,2,3)
-// return : shadok of the nb
-string printshad(int nb);
-
 // Convert shadok to decimal
 // param : string of the number in shadok to convert in decimal
 void shadtodec(string sha);

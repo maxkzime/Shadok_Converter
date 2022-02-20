@@ -31,7 +31,6 @@ using std::cout, std::cin;
 */
 
 
-
 int main()
 {
     cout << "BODIN Maxime C2" << "\n\n";
